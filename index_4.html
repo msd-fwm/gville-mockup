@@ -643,7 +643,172 @@
     </div>
   </section>
 </main>
+<!-- === DOCTOR BIO PANEL === -->
+<section class="bio-section" aria-label="Meet Dr. Sarah Stewart">
+  <style>
+    .bio-section {
+      background-color: #F7F5F0;
+      font-family: 'Montserrat', sans-serif;
+      padding: 80px 24px 100px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .bio-container {
+      max-width: 1152px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .bio-image-col {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 540px;
+    }
+    .blob-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: visible;
+    }
+    .arch-placeholder {
+      width: 403px;
+      height: 529px;
+      border-radius: 202px 202px 24px 24px;
+      background: linear-gradient(135deg, #CBD9D0 0%, #b0c4bb 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .arch-placeholder-inner {
+      text-align: center;
+      color: #30363D;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+    .arch-placeholder-inner svg {
+      display: block;
+      margin: 0 auto 10px;
+    }
+    .bio-content-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .bio-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 600;
+      color: #3E5CA8;
+      line-height: 1.1;
+      margin: 0 0 16px 0;
+    }
+    .bio-overline {
+      width: 36px;
+      height: 2px;
+      background: #7F9F61;
+      margin: 0 0 24px 0;
+      display: block;
+    }
+    .bio-body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #30363D;
+      margin: 0 0 18px 0;
+    }
+    .bio-body:last-of-type {
+      margin-bottom: 32px;
+    }
+    .bio-cta {
+      display: inline-block;
+      background-color: #3E5CA8;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 14px 28px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+      align-self: flex-start;
+      box-shadow: 0 2px 8px rgba(62,92,168,0.18);
+    }
+    .bio-cta:hover { background-color: #6D86BF; }
+    .wave-svg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+      z-index: 1;
+      height: 60px;
+    }
+    @media (max-width: 900px) {
+      .bio-section { padding: 56px 20px 80px; }
+      .bio-container { grid-template-columns: 1fr; gap: 40px; }
+      .bio-image-col { order: 1; min-height: 380px; }
+      .bio-content-col { order: 2; align-items: center; }
+      .bio-heading { font-size: 38px; text-align: center; }
+      .bio-overline { margin-left: auto; margin-right: auto; }
+      .bio-body { text-align: left; font-size: 13px; }
+      .arch-placeholder { width: 252px; height: 331px; border-radius: 126px 126px 20px 20px; }
+      .bio-cta { align-self: center; }
+    }
+  </style>
 
+  <svg class="wave-svg" viewBox="0 0 1400 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M-20 42 C 100 18, 220 52, 380 32 C 520 14, 630 50, 800 30 C 960 10, 1080 46, 1260 28 C 1340 18, 1400 34, 1440 24" stroke="#EBEDF5" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </svg>
+
+  <div class="bio-container">
+    <div class="bio-image-col">
+      <svg class="blob-layer" viewBox="-60 0 580 620" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 20 510 C -30 475, -70 400, -50 315 C -30 235, 45 185, 135 195 C 218 204, 290 260, 318 345 C 348 435, 318 525, 242 558 C 170 588, 75 545, 20 510 Z" fill="#CBD9D0" opacity="0.60"/>
+        <path d="M 330 110 C 300 60, 330 5, 378 2 C 426 -2, 470 35, 468 82 C 466 126, 430 158, 390 150 C 355 143, 342 138, 330 110 Z" fill="#E0E6E0" opacity="0.55"/>
+      </svg>
+      <div class="arch-placeholder">
+        <div class="arch-placeholder-inner">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="14" r="7" stroke="#30363D" stroke-width="2"/>
+            <path d="M4 36c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="#30363D" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Dr. Photo
+        </div>
+      </div>
+    </div>
+
+    <div class="bio-content-col">
+      <h2 class="bio-heading">Meet Dr. Sarah Stewart</h2>
+      <span class="bio-overline" aria-hidden="true"></span>
+      <p class="bio-body">Long before she was a podiatrist, Dr. Sarah Stewart was the one stretching at the barre. Years of competitive ballet, tap, jazz, and lyrical dance has taught her how much your feet really do for you—and how much it hurts when they stop cooperating.</p>
+      <p class="bio-body">Dancing also taught her about doctors. She saw what it felt like to be rushed through an appointment, told to wait for the pain to go away and reduce activities for weeks without an end point, or pushed toward a treatment that didn't fix what was actually wrong.</p>
+      <p class="bio-body">When she opened Grandville Foot and Ankle, she set out to do it differently. It's the kind of care you'd hope to find at a big-city specialty clinic and rarely do. Conversations in plain language instead of medical jargon. Honest answers about which options make sense for your goals—and which probably don't. And a foot doctor who remembers the details about your life from one visit to the next.</p>
+      <a href="#" class="bio-cta">Ready to be heard? Request your appointment today.</a>
+    </div>
+  </div>
+
+</section>
+<!-- === END DOCTOR BIO PANEL === -->
 <!-- ============================== FOOTER ============================== -->
 <footer class="bg-deep-slate text-soft-linen">
   <div class="border-t-2 border-accent-green/60"></div>
