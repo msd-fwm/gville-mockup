@@ -63,6 +63,23 @@
     outline-offset: 3px;
     border-radius: 2px;
   }
+  /* ===== PRACTICE AREAS PANEL ===== */
+  .pa-card{position:relative;height:510px;overflow:hidden;cursor:pointer}
+  .pa-def{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem;z-index:10;transition:opacity .36s ease,transform .36s ease}
+  .pa-card:hover .pa-def{opacity:0;transform:translateY(-10px);pointer-events:none}
+  .pa-hov{position:absolute;inset:0;display:flex;flex-direction:column;padding:2rem;z-index:10;opacity:0;transform:translateY(12px);transition:opacity .36s ease .1s,transform .36s ease .1s;pointer-events:none}
+  .pa-card:hover .pa-hov{opacity:1;transform:translateY(0);pointer-events:auto}
+  .pa-ttl{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1;font-style:italic}
+  .pa-sub{display:block;color:#7F9F61;font-size:.6rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;margin-top:.55rem}
+  .pa-sep{height:1px;margin:1rem 0;border:none}
+  .pa-cols{display:grid;grid-template-columns:1fr 1fr;gap:.6rem .85rem;align-content:start}
+  .cond-lk,.svc-lk{font-size:.67rem;font-weight:500;text-decoration:none;line-height:1.45;display:block;transition:color .18s ease}
+  .cond-lk{color:#2a3f68}.cond-lk:hover{color:#7F9F61}
+  .svc-lk{color:#30363D}.svc-lk:hover{color:#7F9F61}
+  .pa-ft{margin-top:.8rem;padding-top:.8rem}
+  .cond-ftl,.svc-ftl{font-size:.6rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;text-decoration:none;transition:color .18s ease}
+  .cond-ftl{color:#3E5CA8}.cond-ftl:hover{color:#7F9F61}
+  .svc-ftl{color:#30363D}.svc-ftl:hover{color:#7F9F61}
 </style>
 </head>
 
@@ -567,7 +584,64 @@
 
     </div>
   </section>
-
+<!-- === PRACTICE AREAS === -->
+  <section class="bg-soft-linen py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div style="max-width:34rem;margin:0 auto 2.75rem;text-align:center;">
+        <span style="display:block;color:#7F9F61;font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;margin-bottom:.7rem;">Comprehensive Care</span>
+        <h2 class="font-serif" style="font-size:2.4rem;font-weight:500;color:#30363D;line-height:1.18;">Healthy Feet at Every Age<br>and Every Stage</h2>
+        <div style="width:3rem;height:2px;background:#7F9F61;margin:1.1rem auto 0;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+        <div class="pa-card" style="background:#EBEDF5;border-radius:60px 20px 80px 40px;">
+          <div class="pa-def">
+            <h3 class="pa-ttl" style="font-size:3.4rem;color:#2a3f68;">Conditions</h3>
+            <span class="pa-sub">We Treat</span>
+          </div>
+          <div class="pa-hov">
+            <h3 class="pa-ttl" style="font-size:1.9rem;color:#2a3f68;">Conditions</h3>
+            <span class="pa-sub">We Treat</span>
+            <hr class="pa-sep" style="background:rgba(62,92,168,.22);">
+            <div class="pa-cols">
+              <a href="#" class="cond-lk">Bunions</a><a href="#" class="cond-lk">Ankle Sprains</a>
+              <a href="#" class="cond-lk">Corns / Calluses</a><a href="#" class="cond-lk">Ankle Fractures</a>
+              <a href="#" class="cond-lk">Hammertoes</a><a href="#" class="cond-lk">Athlete's Foot</a>
+              <a href="#" class="cond-lk">Heel Pain</a><a href="#" class="cond-lk">Ingrown Toenails</a>
+              <a href="#" class="cond-lk">Plantar Fasciitis</a><a href="#" class="cond-lk">Plantar Warts</a>
+              <a href="#" class="cond-lk">Achilles Tendonitis</a><a href="#" class="cond-lk">Toenail Fungus</a>
+              <a href="#" class="cond-lk">Neuromas</a><a href="#" class="cond-lk">Diabetic Ulcers</a>
+              <a href="#" class="cond-lk">Ankle Arthritis</a><a href="#" class="cond-lk">Neuropathy of the Foot</a>
+            </div>
+            <div class="pa-ft" style="border-top:1px solid rgba(62,92,168,.18);">
+              <a href="#" class="cond-ftl">View All Conditions &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <div class="pa-card" style="background:#E0E6E0;border-radius:20px 60px 40px 80px;">
+          <div class="pa-def">
+            <h3 class="pa-ttl" style="font-size:3.4rem;color:#2a3f68;">Services</h3>
+            <span class="pa-sub">We Provide</span>
+          </div>
+          <div class="pa-hov">
+            <h3 class="pa-ttl" style="font-size:1.9rem;color:#2a3f68;">Services</h3>
+            <span class="pa-sub">We Provide</span>
+            <hr class="pa-sep" style="background:rgba(127,159,97,.38);">
+            <div class="pa-cols">
+              <a href="#" class="svc-lk">Advanced Bunion Surgery</a><a href="#" class="svc-lk">Laser Treatments</a>
+              <a href="#" class="svc-lk">Lapiplasty</a><a href="#" class="svc-lk">KeryFlex Nail Restoration</a>
+              <a href="#" class="svc-lk">Minimally Invasive Bunion Surgery</a><a href="#" class="svc-lk">Onyfix Nail Correction</a>
+              <a href="#" class="svc-lk">Non-Surgical Bunion Treatment</a><a href="#" class="svc-lk">Sports Medicine</a>
+              <a href="#" class="svc-lk">Custom Orthotics</a><a href="#" class="svc-lk">Pediatric Foot Care</a>
+              <a href="#" class="svc-lk">Shockwave Therapy</a><a href="#" class="svc-lk">Diabetic Foot Care</a>
+            </div>
+            <div class="pa-ft" style="border-top:1px solid rgba(127,159,97,.3);">
+              <a href="#" class="svc-ftl">View All Services &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <!-- ============================== FOOTER ============================== -->
